@@ -12,7 +12,7 @@ def multiplicar(a, b):
 
 def dividir(a, b):
     if b == 0:
-        return "Erro: Divisão por zero!"
+        raise ValueError("Erro: Divisão por zero!")
     return a / b
 
 
@@ -22,13 +22,11 @@ def porcentagem(a, b):
 
 def raiz_quadrada(a):
     if a < 0:
-        return "Não é possível calcular a raiz quadrada de um número negativo!"
+        raise ValueError("Erro: Raiz quadrada de número negativo!")
     return a**0.5
 
 
 def exponencial(a, b):
-    if b == 0:
-        return "1"
     return a**b
 
 
@@ -80,23 +78,27 @@ while True:
             break
 
     # 4. Faz a conta
-    if operacao == "+":
-        resultado = somar(num1, num2)
-    elif operacao == "**":
-        resultado = exponencial(num1, num2)
-    elif operacao == "-":
-        resultado = subtrair(num1, num2)
-    elif operacao == "*":
-        resultado = multiplicar(num1, num2)
-    elif operacao == "/":
-        resultado = dividir(num1, num2)
-    elif operacao == "%":
-        resultado = porcentagem(num1, num2)
-    elif operacao == "sqrt":
-        resultado = raiz_quadrada(num1)
-    elif operacao == "cbrt":
-        resultado = raiz_cubica(num1)
-    else:
-        resultado = "Operação inválida"
+    try:
+        if operacao == "+":
+            resultado = somar(num1, num2)
+        elif operacao == "**":
+            resultado = exponencial(num1, num2)
+        elif operacao == "-":
+            resultado = subtrair(num1, num2)
+        elif operacao == "*":
+            resultado = multiplicar(num1, num2)
+        elif operacao == "/":
+            resultado = dividir(num1, num2)
+        elif operacao == "%":
+            resultado = porcentagem(num1, num2)
+        elif operacao == "sqrt":
+            resultado = raiz_quadrada(num1)
+        elif operacao == "cbrt":
+            resultado = raiz_cubica(num1)
+        else:
+            raise ValueError("Operação inválida! Digite uma operação válida.")
+    except ValueError as e:
+        print(f"❌ Erro: str(e)")
+        continue
 
     print("Resultado:", resultado)
