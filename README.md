@@ -1,27 +1,50 @@
-# Calculadora em Python
+# Calculadora Científica Python CLI 🧮
 
-Projeto interativo desenvolvido em Python para execução de operações aritméticas, avançadas e estatísticas no terminal. O foco do projeto é a prática de lógica de programação, estruturação de código e controle de versão com Git/GitHub.
+Uma calculadora de linha de comando (CLI) desenvolvida em Python, com foco em boas práticas de programação, tratamento de exceções, modularização e expansão para funções científicas avançadas.
+
+---
 
 ## 🚀 Funcionalidades Atuais
-- **Operações Básicas:** Soma, Subtração, Multiplicação e Divisão.
-- **Operações Avançadas:** Porcentagem e Raiz Quadrada.
-- **Tratamento de Exceções:** Validação de entradas do usuário e prevenção de erros em tempo de execução (como divisão por zero).
 
-## 📌 Próximas Atualizações (Roadmap)
-- [ ] Exponenciação (Elevar número a uma potência personalizada via input)
-- [ ] Potência fixa (Elevado à 4ª potência)
-- [ ] Raiz Cúbica
-- [ ] Cálculo de Fatorial
+- **Operações Básicas**:
+  - Soma (`+`)
+  - Subtração (`-`)
+  - Multiplicação (`*`)
+  - Divisão (`/`) com validação contra divisão por zero
+  - Porcentagem (`%`)
+- **Potenciação e Raízes**:
+  - Exponenciação (`**`)
+  - Raiz Quadrada (`sqrt`) com validação para números negativos
+  - Raiz Cúbica (`cbrt`) com suporte a números negativos
+- **Usabilidade e Tratamento de Erros**:
+  - Comando de saída (`sair`) funcional em qualquer etapa sem interromper o programa abruptamente.
+  - Tratamento de entradas com `.strip().lower()` para evitar erros com espaços extras ou letras maiúsculas.
+  - Validação de dados via `try/except` (`ValueError`) contra digitações inválidas.
 
-## 🛠️ Tecnologias e Ferramentas
-- **Linguagem:** Python 3
-- **IDE:** Visual Studio Code
-- **Controle de Versão:** Git / GitHub
+---
 
-## 🔧 Como executar o projeto
+## 📌 Próximas Funcionalidades (Roadmap)
 
-1. Certifique-se de ter o Python instalado na sua máquina.
-2. Clone o repositório ou baixe o arquivo `Calculadora.py`.
-3. Abra o terminal na pasta do projeto e rode:
+Planejadas para as próximas versões da calculadora:
+
+- [ ] **Trigonometria**: Seno (`sin`), Cosseno (`cos`), Tangente (`tan`)
+- [ ] **Trigonometria Inversa / Hiperbólica**: ArcSen, ArcCos, ArcTan, Sinh, Cosh, Tanh
+- [ ] **Logaritmos**: Logaritmo natural (`ln`), Logaritmo na base 10 (`log10`), Logaritmo em base arbitrária
+- [ ] **Constantes Matemáticas**: Integração de $\pi$ (Pi) e $e$ (Número de Euler)
+- [ ] **Fatorial e Combinatória**: Fatorial (`n!`), Permutações e Combinações
+- [ ] **Conversão de Ângulos**: Suporte a Graus e Radianos
+
+---
+
+## 🛠️ Pré-requisitos
+
+- **Python 3.x** instalado (utiliza a biblioteca nativa `math` para funções científicas).
+
+---
+
+## 🔧 Como Executar
+
+1. **Clone o repositório**:
    ```bash
-   python Calculadora.py
+   git clone [https://github.com/seu-usuario/Calculadora-Python.git](https://github.com/seu-usuario/Calculadora-Python.git)
+   cd Calculadora-Python
